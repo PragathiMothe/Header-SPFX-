@@ -95,7 +95,8 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
       form input[type="text"]{
         padding:6px;
          border-radius:5px;
-        color: #000;
+        color: #ffffff;
+        background-color: transparent;
         border: none;
       font-size: 12px;
       width: 90%;
@@ -109,7 +110,7 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
         flex-direction:row;
       }
       .navItem {
-        padding: 8px 10px;
+      
         //  border-radius: 50px;
         transition: 200ms;
        
@@ -117,7 +118,7 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding:14px;
+    padding:10px;
     // width: 20%;
 
     border-right: 0.1px solid rgb(68, 68, 68);
@@ -136,15 +137,103 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
 
       .submitbtn {
         // padding: 10px;
-         color: black;
+         color: rgb(251, 245, 245);
+         background-color: transparent;
         position: relative;
         //  border-left: none;
         cursor: pointer;
       right: 20px;
         border: none;
-        background-color: #fff;
-      
-      
+        // background-color:t;
      }
+    //  .sidebar{
+    //    position:fixed;
+    //   top:0;
+    //   left: 0;
+    //   z-index: 999;
+    //   margin-top: 48px;
+    //   height: 100vh;
+    //   background-color: #000;
+    //  }
+//---------------------------------------------------------------------------------------------
 
+    .sidebar {
+      display: none;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 186px;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 10px;
+      text-align: left;
+    
+      .sidebaritem {
+        display: flex;
+        flex-direction: row;
+    
+        .sidebaritemicon{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+        }
+      
+        a {
+          padding: 8px 8px 8px 10px;
+          text-decoration: none;
+          font-size: 19px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          white-space: nowrap;
+        }
+      }
+    }
+    
+    .sidebaropen {
+      display: block;
+      height: 100%;
+      width: 220px;
+      position: fixed;
+      z-index: 999;
+      top: 186px;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 10px;
+      text-align: left;
+    
+      .sidebaritem {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      
+        .sidebaritemicon{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+        }
+        a {
+          padding: 8px 8px 8px 10px;
+          text-decoration: none;
+          font-size: 19px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          white-space: nowrap;
+        }
+      }
+    }
+    
+    .sidebaritem:hover{
+      background-color: #3e3e3e;
+    }
    

@@ -105,5 +105,5 @@ const profile= await _sp.profiles.userProfile
 private _onDispose(): void {
   console.log('[AlertApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
 }  
-
+  
   }

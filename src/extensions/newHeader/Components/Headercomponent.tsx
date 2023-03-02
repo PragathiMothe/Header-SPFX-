@@ -1,13 +1,48 @@
-import * as React from 'react'
+ import * as React from 'react'
 import './Headercomponent.scss'
 import Marquee from "react-fast-marquee";
 import { AiOutlineSearch } from "react-icons/ai";
+import { CgMenuGridO } from "react-icons/cg";
+
+import { BsFillDiagram3Fill,BsFillBookmarkStarFill,BsFillCalendarCheckFill,BsFillBriefcaseFill,} from "react-icons/bs";
+import { IoDocumentsSharp,IoNewspaperOutline } from "react-icons/io5";
+import { RiFileUserFill } from "react-icons/ri";
+import { FaUserFriends } from "react-icons/fa";
+import { TfiAnnouncement } from "react-icons/tfi";
+
+
+
 
 const Headercomponent = (props:any) => {
-  
-
+  // const Sidebar = () => {
+    const[sbState, setSbState] = React.useState<any>(true)
   return (
     <>
+   <div className={sbState?'sidebar':'sidebaropen'}>
+       
+
+       <div className='sidebaritem'><div className="sidebaritemicon"><BsFillBriefcaseFill size={20} color='#fff'/></div><a href='#'>Job Openings</a></div>
+
+       <div className='sidebaritem'><div className="sidebaritemicon"><IoDocumentsSharp size={20} color="#fff"/></div><a href=''>HR Documents</a></div>
+       
+
+       <div className='sidebaritem'><div className=" sidebaritemicon"><FaUserFriends  size={20} color="#fff"/></div><a href=''>Employee Details</a></div>
+
+       <div className='sidebaritem'><div className=" sidebaritemicon"><TfiAnnouncement size={20} color="#fff"/></div><a href=''>Announcements</a></div>
+
+       <div className='sidebaritem'><div className="sidebaritemicon"><IoNewspaperOutline size={20} color="#fff"/> </div><a href=''>News</a></div>
+
+       <div className='sidebaritem'><div className="sidebaritemicon"><BsFillCalendarCheckFill size={20} color='#fff'/></div><a href=''>Holidays List</a></div>
+
+       <div className='sidebaritem'><div className='sidebaritemicon'><BsFillDiagram3Fill size={20} color='#fff'/></div><a href=''>Organization Tree</a></div>
+
+       <div className='sidebaritem'><div className="sidebaritemicon"><RiFileUserFill size={20} color='#fff'/> </div><a href=''>HR Feedback</a></div>
+
+       <div className='sidebaritem'><div className=" sidebaritemicon"><BsFillBookmarkStarFill size={20} color='#fff'/></div><a href=''>Star Of The Month</a></div>
+       
+   </div> <div>
+
+    </div>
     <div className='Navbars' style={{backgroundImage:`url(${props.uri}/sites/${props.sitename}/SiteAssets/New%20Project.png)`}}>
                   <div className="profile" >
             <img src={props.url} alt="Profilepic"/>
@@ -31,7 +66,7 @@ const Headercomponent = (props:any) => {
            </Marquee>
           
             </div>
-            <img className="img1" height={100} width={40} src="https://media.licdn.com/dms/image/C560BAQFacTXsV9Hupw/company-logo_200_200/0/1631323893584?e=2147483647&v=beta&t=ZDcsOZW4FVQnZUmmycNuNjKm_ULyE2T1OiEEUO6M6kk" alt="Logo"/> 
+            <img className="img1" src={`${props.uri}/sites/${props.sitename}/SiteAssets/zelarlogo.jpg`} alt="Logo"/> 
           
      
 </div>
@@ -39,11 +74,14 @@ const Headercomponent = (props:any) => {
      <ul>
        <li>
      <div className="navList">
+
+
+     <div className="navItem"><a href=""></a><CgMenuGridO onClick={()=>setSbState(!sbState)} size={20}/></div>
      <div className="navItem"><a href="">Home</a></div>
      <div className="navItem"><a href=" https://24cl8t.sharepoint.com/sites/Dev/ProjectsClients">Projects & clients</a></div>
      <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/HRM">Human Resources</a></div>
      <div className ="navItem"><a href=" https://24cl8t.sharepoint.com/sites/Dev/Admin">Administration</a></div>
-     <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/SalesMarketing">Sales&Marketing</a></div>
+     <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/SalesMarketing">Sales & Marketing</a></div>
      <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/Finance">Finanace</a></div>
      <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/LearingManag">Learning management</a></div>
      <div className ="navItem"><a href="https://24cl8t.sharepoint.com/sites/Dev/EcoCult">ZEA</a></div>
@@ -63,8 +101,10 @@ const Headercomponent = (props:any) => {
  <button className='submitbtn' type="submit"><AiOutlineSearch size={15}/></button>
 </form>
 </div>
+
 </>
   )
 }
+
 
 export default Headercomponent
