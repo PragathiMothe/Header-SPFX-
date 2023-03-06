@@ -68,8 +68,7 @@
         margin-right: 80px;
       }
       .topnav{
-        background: rgb(27,27,27);
-background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
+        background: rgb(151, 182, 247);
         color:white;
         display:flex;
         align-items:center;
@@ -121,7 +120,7 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
     padding:10px;
     // width: 20%;
 
-    border-right: 0.1px solid rgb(68, 68, 68);
+    border-right: 0.1px solid rgb(250, 251, 253);
     a{
       font-size: 14px;
       color: #ffffff;
@@ -187,7 +186,7 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
           padding: 8px 8px 8px 10px;
           text-decoration: none;
           font-size: 19px;
-          color: #818181;
+          color: #490af6;
           display: block;
           transition: 0.3s;
           white-space: nowrap;
@@ -203,7 +202,7 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
       z-index: 999;
       top: 186px;
       left: 0;
-      background-color: #111;
+      background-color: rgb(151, 182, 247);
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 10px;
@@ -237,3 +236,59 @@ background: linear-gradient(0deg, rgba(27,27,27,1) 24%, rgba(0,0,0,1) 53%);
       background-color: #3e3e3e;
     }
    
+
+    .menubar{
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+      grid-auto-rows: 50px;
+      background-color: rgb(151, 182, 247);
+      width: 330px;
+      position: fixed;
+      z-index: 999;
+      top: 190px;
+      left: 51px;
+      border-radius: 10px;
+      padding: 10px;
+      .menuitem {
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       a{
+       text-decoration: none;
+       color: #ffffff;
+       }
+      }
+    }
+    .menuitem:hover{
+      background-color: #579BDC;
+     border-radius: 5px;
+    }
+
+    .menubarclose{
+      display: none;
+      grid-template-columns: repeat(2, 150px);
+      grid-auto-rows: 50px;
+      background-color: rgb(151, 182, 247);
+      width: 330px;
+      position: fixed;
+      z-index: 999;
+      top: 190px;
+      left: 51px;
+      border-radius: 10px;
+      padding: 10px;
+      .menuitem {
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       a{
+       text-decoration: none;
+       color: #ffffff;
+       }
+      }
+    }
+    .menuitem:hover{
+      background-color: #579BDC;
+     border-radius: 5px;
+    }

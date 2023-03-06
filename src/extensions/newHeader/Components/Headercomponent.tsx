@@ -18,7 +18,7 @@ const Headercomponent = (props:any) => {
     const[sbState, setSbState] = React.useState<any>(true)
   return (
     <>
-   <div className={sbState?'sidebar':'sidebaropen'}>
+   {/* <div className={sbState?'sidebar':'sidebaropen'}>
        
 
        <div className='sidebaritem'><div className="sidebaritemicon"><BsFillBriefcaseFill size={20} color='#fff'/></div><a href='#'>Job Openings</a></div>
@@ -40,9 +40,57 @@ const Headercomponent = (props:any) => {
 
        <div className='sidebaritem'><div className=" sidebaritemicon"><BsFillBookmarkStarFill size={20} color='#fff'/></div><a href=''>Star Of The Month</a></div>
        
-   </div> <div>
+   </div> <div> */}
 
-    </div>
+    {/* </div> */}
+
+
+<div className={sbState?'menubarclose':'menubar'}>
+  <div className="menuitem">
+    <div className="menuicon"><BsFillBriefcaseFill size={20} color='white'/></div>
+    <a href=''>Job Openings</a>
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><IoDocumentsSharp size={20} color="white"/></div>
+    <a href=''>HR Documents</a>
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><FaUserFriends  size={20} color="white"/></div>
+    <a href=''>Employee Details</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><TfiAnnouncement size={20} color="white"/></div>
+    <a href=''>Announcements</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><IoNewspaperOutline size={20} color="white"/></div>
+    <a href=''>News</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><BsFillCalendarCheckFill size={20} color='white'/></div>
+    <a href=''>Holidays List</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><BsFillDiagram3Fill size={20} color='white'/></div>
+    <a href=''>Organization Tree</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><RiFileUserFill size={20} color='white'/></div>
+    <a href=''>HR Feedback</a>
+    
+  </div>
+  <div className="menuitem">
+    <div className="menuicon"><BsFillBookmarkStarFill size={20} color='white'/></div>
+    <a href=''>Star Of The Month</a>
+    
+  </div>
+</div>
+
     <div className='Navbars' style={{backgroundImage:`url(${props.uri}/sites/${props.sitename}/SiteAssets/New%20Project.png)`}}>
                   <div className="profile" >
             <img src={props.url} alt="Profilepic"/>
