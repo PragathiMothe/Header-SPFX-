@@ -68,7 +68,7 @@
         margin-right: 80px;
       }
       .topnav{
-        background: rgb(151, 182, 247);
+        background: #345978;
         color:white;
         display:flex;
         align-items:center;
@@ -128,10 +128,10 @@
       }
 
       .navItem:hover{
-        background-color: #579BDC;
-        a{
-            color: #fbf9f9;
-        }
+        background-color: #547CA2;
+        // a{
+        //     color: #fbf9f9;
+        // }
       } 
 
       .submitbtn {
@@ -139,10 +139,11 @@
          color: rgb(251, 245, 245);
          background-color: transparent;
         position: relative;
-        //  border-left: none;
+        
         cursor: pointer;
-      right: 20px;
+      right: 5px;
         border: none;
+       
         // background-color:t;
      }
     //  .sidebar{
@@ -172,7 +173,7 @@
     
       .sidebaritem {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     
         .sidebaritemicon{
           display: flex;
@@ -202,7 +203,7 @@
       z-index: 999;
       top: 186px;
       left: 0;
-      background-color: rgb(151, 182, 247);
+      background-color: #345978;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 10px;
@@ -233,35 +234,44 @@
     }
     
     .sidebaritem:hover{
-      background-color: #3e3e3e;
+      background-color: #547CA2;
     }
    
-
+    input::placeholder {
+      color: rgb(252, 249, 249);
+  }
     .menubar{
       display: grid;
-      grid-template-columns: repeat(2, 150px);
-      grid-auto-rows: 50px;
-      background-color: rgb(151, 182, 247);
-      width: 330px;
-      position: fixed;
-      z-index: 999;
+      // grid-template-columns: repeat(2, 150px);
+      grid-auto-rows: unset;
+      background-color: #345978;
+      width: 303px;
+       position: fixed;
+      z-index: 999999;
       top: 190px;
       left: 51px;
+      height: 60vh;
       border-radius: 10px;
       padding: 10px;
+      //  overflow-x: hidden;
+      // overflow-y: scroll;
       .menuitem {
         display: flex;
-       flex-direction: column;
+       flex-direction: row;
        align-items: center;
-       justify-content: center;
+        
+      //  justify-content: center;
        a{
        text-decoration: none;
        color: #ffffff;
        }
       }
     }
+    .menuitem >*{
+      padding: 5px;
+    }
     .menuitem:hover{
-      background-color: #579BDC;
+      background-color: #547CA2;
      border-radius: 5px;
     }
 
@@ -289,6 +299,17 @@
       }
     }
     .menuitem:hover{
-      background-color: #579BDC;
+      background-color: #547CA2;
      border-radius: 5px;
     }
+
+    .searchBardiv{
+      background-color: #ffffff00;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid gray;
+      
+    }
+    textarea:focus, input:focus{
+      outline: none;
+  }

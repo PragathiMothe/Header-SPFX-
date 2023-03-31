@@ -114,7 +114,7 @@ const Headercomponent = (props:any) => {
            </Marquee>
           
             </div>
-            <img className="img1" src={`${props.uri}/sites/${props.sitename}/SiteAssets/zelarlogo.jpg`} alt="Logo"/> 
+            <img className="img1" src="https://24cl8t.sharepoint.com/sites/Dev/SiteAssets/Zelarlogo.png" alt="Logo"></img>
           
      
 </div>
@@ -143,11 +143,13 @@ const Headercomponent = (props:any) => {
     <AiOutlineSearch size={20} color='black'/>
      </div>
      </div> */}
-
-<form action="/_layouts/15/search.aspx/All" method="get">
+<div className="searchBardiv">
+  <form action="/_layouts/15/search.aspx/All" method="get">
  <input type="text" placeholder="Search.." name="q"/>
- <button className='submitbtn' type="submit"><AiOutlineSearch size={15}/></button>
 </form>
+<button className='submitbtn' type="submit"><AiOutlineSearch size={15}/></button>
+</div>
+
 </div>
 
 </>
